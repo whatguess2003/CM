@@ -3,9 +3,16 @@
   "name": "cm",
   "main": "workers/cm.js",
   "compatibility_date": "2026-10-22",
+  "keep_vars": true,
   "observability": {
     "enabled": true
   },
+  "hyperdrive": [
+    {
+      "binding": "DATABASE_URL",
+      "id": "ff0f7ba9bb09464baa17495513a9575f"
+    }
+  ],
   "containers": [
     {
       "class_name": "CmService",
