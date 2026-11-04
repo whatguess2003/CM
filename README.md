@@ -9,4 +9,6 @@ pip install -r requirements.txt
 LEON_HOME=../LEON python channel_manager_server.py
 ```
 
-The process listens on `CHANNEL_MANAGER_PORT` (default 8006). `GET /health` does not need the service secret. Set `AIOSSELL_PARTNER_ID` in the worker environment; it is not stored in `wrangler.jsonc`.
+The process listens on `CHANNEL_MANAGER_PORT` (default 8006). `GET /health` does not need the service secret. Set `AIOSSELL_PARTNER_ID` in the worker environment; it is not stored in `wrangler.jsonc`. `keep_vars` leaves that dashboard variable in place on deploy.
+
+The `cm` Worker builds from this repository. The deploy command is `npx wrangler deploy --containers-rollout=immediate`.
